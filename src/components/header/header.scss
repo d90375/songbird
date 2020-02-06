@@ -1,0 +1,40 @@
+@import "../../index";
+
+.header {
+  margin-top: 0.5rem;
+}
+
+.logo {
+  width: 250px;
+}
+
+.top-panel {
+  margin-top: 15px;
+  margin-bottom: 0.5rem;
+
+}
+
+.page-item {
+  flex: auto;
+  text-align: center;
+
+}
+
+.page-link {
+
+  background-color: $second;
+  border-color: #b3622d;
+
+  &:hover {
+    background-color: $second
+  }
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: 0;
+  line-height: 1.25;
+  color: #fff;
+  outline: none;
+  border-radius: 0;
+  cursor: auto;
+}
