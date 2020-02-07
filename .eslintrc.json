@@ -24,6 +24,14 @@
         "track": ["Track"]
       }
     ],
-    "react/prop-types": [0, {}]
+    "react/prop-types": [0, {}],
+    "jsx-a11y/interactive-supports-focus": [
+      0,
+      {
+        "tabbable": ["button", "checkbox", "link", "searchbox", "spinbutton", "switch", "textbox"]
+      }
+    ],
+    "react/jsx-props-no-spreading": [0],
+    "no-shadow": 0
   }
 }

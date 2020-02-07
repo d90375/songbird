@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
+import birdsData from "../../config/birdsData";
 import "./list.scss";
+import BirdContext from "../../store/context/context";
+import ListItem from "./listItem";
 
 const List = () => {
+  const { level } = useContext(BirdContext);
+
   return (
     <div className="col-md-6">
       <ListGroup>
-        {Object.values([1, 2, 3, 4, 5, 6, 7]).map(item => (
-          <ListGroup.Item className="listItem" key={item}>
-            <span className="textItem"></span>{item}
-          </ListGroup.Item>
+        {Object.values(birdsData[level]).map(item => (
+          <ListItem item={item} />
         ))}
       </ListGroup>
     </div>

@@ -3567,6 +3567,14 @@ dir-glob@2.0.0:
     arrify "^1.0.1"
     path-type "^3.0.0"
 
+direct-styled@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/direct-styled/-/direct-styled-1.0.1.tgz#556c14dfa186603217d8e46b10a1a508b2a2116a"
+  integrity sha512-eGz+WXxlTpzfi4qm+CMHG7NZ1/HzrwpzvPqvjYl6/xyfK+PPIeOIRrhTtg79Cp9lT68fjyqxJ4ZxiWB22X9AEw==
+  dependencies:
+    shallow-equal-object "^1.1.1"
+    utility-types "^3.5.0"
+
 dns-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/dns-equal/-/dns-equal-1.0.0.tgz#b39e7f1da6eb0a75ba9c17324b34753c47e0654d"
@@ -8935,6 +8943,11 @@ react-transition-group@^4.0.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-use-gesture@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-7.0.3.tgz#300e45e25f9ff85b31244df8d418b66697d45823"
+  integrity sha512-MRkxwgY56eG95th78TnwlRH77TQRmONaG4mfs6wE/UDTJWQ1mXcraSP7zZXaXa3Q25WHgP53lB09KtnjL6ev2Q==
+
 react@^16.12.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
@@ -9639,6 +9652,11 @@ shallow-clone@^3.0.0:
   integrity sha512-/6KqX+GVUdqPuPPd2LxDDxzX6CAbjJehAAOKlNpqqUpAqPM6HeL8f+o3a+JsyGjn2lv0WY8UsTgUJjU9Ok55NA==
   dependencies:
     kind-of "^6.0.2"
+
+shallow-equal-object@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/shallow-equal-object/-/shallow-equal-object-1.1.1.tgz#0c016b8cc16dc59ab76739b6eeaa9c99d68beef7"
+  integrity sha512-9DDzYRlzCwF2CemeF0aOFk5T5KMrjG7HldcW7utwYhA/limuGHn3No8KhpDE8BrO7GLaSRJumNKReipZBybd7A==
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -10704,6 +10722,11 @@ utila@^0.4.0, utila@~0.4:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/utila/-/utila-0.4.0.tgz#8a16a05d445657a3aea5eecc5b12a4fa5379772c"
   integrity sha1-ihagXURWV6Oupe7MWxKk+lN5dyw=
+
+utility-types@^3.5.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/utility-types/-/utility-types-3.10.0.tgz#ea4148f9a741015f05ed74fd615e1d20e6bed82b"
+  integrity sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==
 
 utils-merge@1.0.1:
   version "1.0.1"
