@@ -23,6 +23,7 @@
         "video": ["Video"],
         "track": ["Track"]
       }
-    ]
+    ],
+    "react/prop-types": [0, {}]
   }
 }

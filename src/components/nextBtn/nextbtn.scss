@@ -1,21 +1,27 @@
-.btn-next{
+.btn {
   width: 100%;
   margin: 25px 15px;
   background-color: #303030;
   border: 1px solid #444;
-  color: #fff!important;
+  color: #fff !important;
   cursor: auto;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   outline: 0;
   box-shadow: none;
-  &:focus{
+  &:focus
+  {
     box-shadow: none;
     outline: 0;
   }
-  &:hover{
+  &:active{
+    box-shadow: none;
+    outline: 0;
+    background-color: #b3622d;
+  }
+
+  &:hover {
     background-color: #303030;
     outline: 0;
   }
-
 }

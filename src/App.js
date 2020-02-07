@@ -5,17 +5,20 @@ import Question from "./components/question";
 import List from "./components/list";
 import Description from "./components/description";
 import NextBtn from "./components/nextBtn";
+import BirdState from "./store/actions/action";
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Question />
-      <div className="row mb2">
-        <List />
-        <Description />
-        <NextBtn />
-      </div>
+      <BirdState>
+        <Header />
+        <Question />
+        <div className="row mb2">
+          <List />
+          <Description />
+          <NextBtn />
+        </div>
+      </BirdState>
     </>
   );
 };

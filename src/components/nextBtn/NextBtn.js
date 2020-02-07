@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./nextbtn.scss";
-import Button from 'react-bootstrap/Button';
+import BirdContext from "../../store/context/context";
 
 const NextBtn = () => {
+  const { level, setLevel } = useContext(BirdContext);
+  let counter = level;
 
-  return <Button className='btn-next' type="submit" onClick={}>Next Level</Button>
-
+  return (
+    <button
+      className="btn"
+      type="submit"
+      onClick={() => {
+        setLevel(counter < 5 ? (counter += 1) : 0);
+      }}
+    >
+      Next Level
+    </button>
+  );
 };
 
 export default NextBtn;
