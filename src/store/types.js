@@ -1,1 +1,3 @@
-export const  CHNAGE_LEVEL = "CHANGE_LEVEL";
+export const CHANGE_LEVEL = "CHANGE_LEVEL";
+export const CHANGE_DESCRIPTION = "CHANGE_DESCRIPTION";
+export const SUCCESS = "SUCCESS";

@@ -13,8 +13,7 @@ const Header = () => {
       <div className="top-panel d-flex justify-content-between align-items-end mb-4 mr-3">
         <img className="logo" src={back} alt="" />
         <h5>
-          Score: {level}
-          <span className="score"> 0</span>
+          SCORE <span className="score"> 0</span>
         </h5>
       </div>
       <Pagination className="pagination flex-wrap mb-4 ">

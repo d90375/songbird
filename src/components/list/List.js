@@ -12,7 +12,7 @@ const List = () => {
     <div className="col-md-6">
       <ListGroup>
         {Object.values(birdsData[level]).map(item => (
-          <ListItem item={item} />
+          <ListItem item={item} level={level} key={item.id} />
         ))}
       </ListGroup>
     </div>
