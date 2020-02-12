@@ -1,20 +1,13 @@
 import React, { useContext } from "react";
 
 import "./nextbtn.scss";
-import BirdContext from "../../store/context/context";
+import BirdsContext from "../../store/context/BirdsContext";
 
-const NextBtn = () => {
-  const { level, setLevel } = useContext(BirdContext);
-  let counter = level;
+const NextBtn = ({currentBirdsData}) => {
+  const {  setLevel } = useContext(BirdsContext);
 
   return (
-    <button
-      className="btn"
-      type="submit"
-      onClick={() => {
-        setLevel(counter < 5 ? (counter += 1) : 0);
-      }}
-    >
+    <button className="btn" type="submit" onClick={() => setLevel(currentBirdsData)}>
       Next Level
     </button>
   );

@@ -1,20 +1,19 @@
-
-.cornerItem{
-  display: inline-block;
+.cornerItem {
   width: 10px;
+  display: inline-block;
   height: 10px;
   margin-right: 15px;
   border-radius: 50%;
-  -webkit-transition: .1s;
-  transition: .1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   background-color: #444;
-}
 
-.success{
-  background-color: springgreen;
-}
 
-.cancel{
-  background-color: tomato;
+  &.success {
+    background-color: green;
+  }
 
+  &.cancel {
+    background-color: red;
+  }
 }

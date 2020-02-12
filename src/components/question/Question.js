@@ -1,22 +1,35 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import birdsData from "../../config/birdsData";
+
 import "./question.scss";
-import BirdContext from "../../store/context/context";
+import Image from 'react-bootstrap/Image';
 import Info from "./Info";
 import Poster from "./Poster";
+import rndImg from '../../images/bird.06a46938.jpg'
 
-const Question = () => {
-  const { level, success } = useContext(BirdContext);
-  const { audio, name, species, image } = birdsData[level][0];
 
-  useEffect(() => {}, []);
+const Question = ({ audio, name , image}) => {
+
+  // const [id, setId] = useState(0);
+  //
+  // const birdsList = birdsData[level];
+  // const { audio, name, species, image } = birdsList[id];
+  //
+  // useEffect(() => {
+  //   const randId = Math.floor(Math.random() * 6)
+  //   setId(randId);
+  //   setRandomId(randId);
+  // }, [ level]);
+
 
   return (
     <Jumbotron className="random-question d-flex">
-      <Poster image={image} />
+
+      <Poster alt={name} image={image} /> :
+      <Image className='random-image' rounded thumbnail fluid  alt={rndImg} src={rndImg} />}
       <div className="random-container">
-        <Info audio={audio} name={name} species={species} speciesVisible={false} />
+
+        {/*species={species}*/}
       </div>
     </Jumbotron>
   );

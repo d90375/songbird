@@ -1,16 +1,15 @@
-import React, { useContext } from "react";
+import React from 'react';
 import ListGroup from "react-bootstrap/ListGroup";
-import "./listitem.scss";
-import BirdContext from "../../../store/context/context";
+import './listitem.scss'
 
-const ListItem = ({ item }) => {
-  const { success, setDescriptionId } = useContext(BirdContext);
+const ListItem = ({ i, onClick, itemClass, birdName }) => {
+
 
   return (
     <>
-      <ListGroup.Item onClick={() => {setDescriptionId(item.id)}} className="listItem" >
-        <div className="cornerItem" />
-        {item.name}
+      <ListGroup.Item onClick={() => onClick(i)} className="listItem">
+        <div className={`cornerItem ${itemClass}`} />
+        {birdName}
       </ListGroup.Item>
     </>
   );

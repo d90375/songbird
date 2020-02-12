@@ -3,10 +3,10 @@ import Image from "react-bootstrap/Image";
 
 import "./poster.scss";
 
-const Poster = ({ image }) => {
+const Poster = ({ image, alt }) => {
   return (
     <>
-      <Image className="random-image"  rounded thumbnail fluid src={image} />
+      <Image className="random-image"  rounded thumbnail fluid alt={alt} src={image} />
     </>
   );
 };

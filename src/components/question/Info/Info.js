@@ -4,7 +4,9 @@ import AudioPlayer from "../../../containers/AudioPlayer";
 
 import "./info.scss";
 
-const Info = ({ name, species, audio, speciesVisible }) => {
+const Info = ({ name, species, audio, speciesVisible, }) => {
+  // const isWin = isNextStepAvailable ? { name } : ;
+
   return (
     <>
       <ListGroup variant="flush">

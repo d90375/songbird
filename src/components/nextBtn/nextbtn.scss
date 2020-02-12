@@ -1,7 +1,9 @@
+@import "../../index";
+
 .btn {
   width: 100%;
-  margin: 25px 15px;
-  background-color: #303030;
+  margin-top: 50px;
+  background-color: $second;
   border: 1px solid #444;
   color: #fff !important;
   cursor: auto;
@@ -13,15 +15,16 @@
   {
     box-shadow: none;
     outline: 0;
+    background-color:$second;
   }
   &:active{
     box-shadow: none;
     outline: 0;
-    background-color: #b3622d;
+    background-color:$second;
   }
 
   &:hover {
-    background-color: #303030;
+    background-color: (lighten($second,10%));
     outline: 0;
   }
 }

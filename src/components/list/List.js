@@ -1,19 +1,19 @@
-import React, { useContext } from "react";
+import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import birdsData from "../../config/birdsData";
 import "./list.scss";
-import BirdContext from "../../store/context/context";
 import ListItem from "./listItem";
 
-const List = () => {
-  const { level } = useContext(BirdContext);
-
+const List = ({  onClick, birds, tries, answer }) => {
   return (
     <div className="col-md-6">
       <ListGroup>
-        {Object.values(birdsData[level]).map(item => (
-          <ListItem item={item} level={level} key={item.id} />
-        ))}
+
+        {Object.values(birds).map((bird, i) => {
+          // eslint-disable-next-line no-nested-ternary
+          const itemClass = tries.includes(i) ? "cancel" : answer === i ? "success" : "";
+          return <ListItem itemClass={itemClass} birdName={bird.name} key={i} i={i} onClick={onClick} />;
+          // setDescId={setDescId}
+        })}
       </ListGroup>
     </div>
   );
