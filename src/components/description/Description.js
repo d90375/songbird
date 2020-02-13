@@ -9,8 +9,8 @@ const Description = ({ birdsList, isClickedIndex }) => {
       <Card className="description">
         {isClickedIndex === null ? (
           <p className="instruction">
-            <span>Послушайте плеер.</span>
-            <span>Выберите птицу из списка</span>
+            <span>Послушайте плеер. </span>
+            <span>Выберите птицу из списка.</span>
           </p>
         ) : (
           <Container birdsList={birdsList} isClickedIndex={isClickedIndex} />
