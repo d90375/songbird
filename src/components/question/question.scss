@@ -1,8 +1,17 @@
-.random-question .random-container {
-  width: calc(100% - 240px);
-  margin: 0;
+.random-question {
+  .random-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .list-group{
+    margin-left: 1rem;
+  }
+
+  margin-bottom: 1.5rem;
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  border: 1px solid #444;
 }
-
-
-
-

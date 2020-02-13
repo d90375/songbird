@@ -3,16 +3,18 @@ import ListGroup from "react-bootstrap/ListGroup";
 import "./list.scss";
 import ListItem from "./listItem";
 
-const List = ({  onClick, birds, tries, answer }) => {
+const List = ({ setClicker, birdsList, answerList, answer, cancelPlayer, successPlayer  }) => {
   return (
-    <div className="col-md-6">
+    <div className="left-list col-md-3">
       <ListGroup>
-
-        {Object.values(birds).map((bird, i) => {
-          // eslint-disable-next-line no-nested-ternary
-          const itemClass = tries.includes(i) ? "cancel" : answer === i ? "success" : "";
-          return <ListItem itemClass={itemClass} birdName={bird.name} key={i} i={i} onClick={onClick} />;
-          // setDescId={setDescId}
+        {Object.values(birdsList).map((item, i) => {
+          let itemClass = "";
+          if (answerList.includes(i)) {
+            itemClass = "cancel";
+          } else {
+            itemClass = answer === i ? "success" : "";
+          }
+          return <ListItem itemClass={itemClass} birdName={item.name} key={item.id} i={i} cancelPlayer={cancelPlayer} successPlayer={successPlayer}  setClicker={setClicker}  />;
         })}
       </ListGroup>
     </div>

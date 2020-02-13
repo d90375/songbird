@@ -17,7 +17,10 @@ function AudioPlayer({ url }) {
         <div style={{ color: "white" }}>Loading...</div>
       ) : (
         <div className="controls">
-          <PlaybackButton onClick={audioProps.togglePlaybackStatus} playbackStatus={audioProps.playbackStatus} />
+          <PlaybackButton
+            onClick={audioProps.togglePlaybackStatus}
+            playbackStatus={audioProps.playbackStatus}
+          />
           <TimeBar
             currentTime={audioProps.currentTime}
             isSeeking={audioProps.isSeeking}

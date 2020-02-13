@@ -3,23 +3,23 @@ import "./header.scss";
 import Pagination from "react-bootstrap/Pagination";
 import PageItem from "react-bootstrap/PageItem";
 import { LIST_NAME } from "../../constants";
-import back from "../../images/logowhiteapr.png";
+import back from "../../assetes/img/logowhiteapr.png";
 
 
-const Header = ({score,step}) => {
+const Header = ({score,level}) => {
 
 
   return (
-    <header className="">
-      <div className="top-panel d-flex justify-content-between align-items-end mb-4 mr-3">
+    <header className="header">
+      <div className="top-panel">
         <img className="logo" src={back} alt="" />
-        <h5>
+        <h5 className='score-title'>
           SCORE <span className="score"> {score}</span>
         </h5>
       </div>
-      <Pagination className="pagination flex-wrap mb-4 ">
+      <Pagination className="pagination flex-wrap mb-4 overflow-hidden" >
         {Object.values(LIST_NAME).map((item, index) => (
-          <PageItem className="pageItem" key={item} active={step === index}>
+          <PageItem className="pageItem" key={item} active={level === index}>
             {item}
           </PageItem>
         ))}

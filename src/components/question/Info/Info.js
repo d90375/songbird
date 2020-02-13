@@ -4,15 +4,12 @@ import AudioPlayer from "../../../containers/AudioPlayer";
 
 import "./info.scss";
 
-const Info = ({ name, species, audio, speciesVisible, }) => {
-  // const isWin = isNextStepAvailable ? { name } : ;
+const Info = ({ name, species, audio, speciesVisible, nextLevel }) => {
 
   return (
     <>
       <ListGroup variant="flush">
-        <ListGroup.Item>
-          <h3>{name}</h3>
-        </ListGroup.Item>
+        <ListGroup.Item>{speciesVisible ? <h3>{name}</h3> : <h3>{nextLevel ? name : "******"}</h3>}</ListGroup.Item>
         {speciesVisible && (
           <ListGroup.Item>
             <h5>{species}</h5>

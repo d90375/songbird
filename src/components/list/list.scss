@@ -1,6 +1,13 @@
 .listItem{
 cursor: pointer;
-  //&:hover{
-  //  background-color: darken(#444,10%);
-  //}
+  &:hover{
+    background-color: darken(#444,10%);
+  }
+}
+html .left-list{
+  padding-right: 0;
+  @media (max-width: 768px) {
+    padding-right: 15px;
+    margin-bottom: 1rem;
+  }
 }
