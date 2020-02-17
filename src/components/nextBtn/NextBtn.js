@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-
-import "./nextbtn.scss";
 import BirdsContext from "../../store/context/BirdsContext";
+import "./nextbtn.scss";
 
 const NextBtn = ({ currentBirdsData, currentRandomIndex }) => {
   const { setLevel } = useContext(BirdsContext);

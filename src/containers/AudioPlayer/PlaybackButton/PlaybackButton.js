@@ -1,8 +1,5 @@
 import * as React from "react";
-import { useContext } from "react";
-import BirdsContext from "../../../store/context/BirdsContext";
-import { useRef } from "react";
-import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 const PauseIcon = props => (
   <svg viewBox="0 0 47.607 47.607" {...props}>
@@ -23,29 +20,21 @@ const PlayIcon = props => (
 );
 
 function PlaybackButton({ playbackStatus, onClick }) {
-  const btnRef = useRef();
-  const { stopMainPlayer } = useContext(BirdsContext);
-
-  let newPlaybackStatus = playbackStatus;
-
-  useEffect(() => {
-    if (stopMainPlayer) {
-      newPlaybackStatus = "stop";
-    }
-  }, [stopMainPlayer]);
-
   return (
-    <div
-      role="button"
-      ref={btnRef}
-      onKeyDown={onClick}
-      onClick={onClick}
-      id="playback-button"
-      className="playback-button"
-    >
-      {newPlaybackStatus === "play" ? <PauseIcon /> : <PlayIcon />}
+    <div role="button" onKeyDown={onClick} onClick={onClick} id="playback-button" className="playback-button">
+      {playbackStatus === "play" ? <PauseIcon /> : <PlayIcon />}
     </div>
   );
 }
+
+PlaybackButton.defaultProps = {
+  playbackStatus: "stop",
+  onClick: () => {}
+};
+
+PlaybackButton.propTypes = {
+  playbackStatus: PropTypes.string,
+  onClick: PropTypes.func
+};
 
 export default PlaybackButton;

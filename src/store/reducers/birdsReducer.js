@@ -2,12 +2,11 @@ import { CHANGE_LEVEL, NEW_GAME, SET_WINNER } from "../types";
 
 import { POINT, MAX } from "../../constants";
 
-
 const birdsReducer = (state, action) => {
   const stateCopy = { ...state };
   switch (action.type) {
     case CHANGE_LEVEL:
-      if (stateCopy.level === action.payload.data.length-1) {
+      if (stateCopy.level === action.payload.data.length - 1) {
         stateCopy.finish = true;
       }
       stateCopy.targetIndex = action.payload.currentRndIndex;
@@ -16,6 +15,7 @@ const birdsReducer = (state, action) => {
       stateCopy.isClickedIndex = null;
       stateCopy.nextLevel = false;
       stateCopy.answerList = [];
+      stateCopy.isStop = false;
       return stateCopy;
     case NEW_GAME:
       stateCopy.level = 0;
@@ -26,6 +26,7 @@ const birdsReducer = (state, action) => {
       stateCopy.nextLevel = false;
       stateCopy.answerList = [];
       stateCopy.finish = false;
+      stateCopy.isStop = false;
       return stateCopy;
     case SET_WINNER:
       stateCopy.isClickedIndex = action.payload.index;
@@ -35,9 +36,8 @@ const birdsReducer = (state, action) => {
       }
       stateCopy.answer = action.payload.index;
       if (action.payload.index === stateCopy.targetIndex) {
+        stateCopy.isStop = true;
         action.payload.successPlayer.current.play();
-        stateCopy.stopMainPlayer = true;
-        document.getElementById("playback-button").click();
         stateCopy.score = stateCopy.score + MAX - POINT * stateCopy.answerList.length;
         stateCopy.nextLevel = true;
       } else {
@@ -45,6 +45,7 @@ const birdsReducer = (state, action) => {
         stateCopy.answerList.push(action.payload.index);
       }
       return stateCopy;
+
     default:
       return state;
   }

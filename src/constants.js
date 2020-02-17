@@ -1,6 +1,6 @@
 import BIRDS_DATA from './config/birdsData';
 
-export const LIST_NAME = ["Разминка", "Воробьиные", "Лесные птицы", "Певчие птицы", "Хищные птицы", "Морские птицы"];
+export const LIST_NAME = ["Main Hero", "Support Hero", "Species Heroes", "Starships", "Planets", "Vehicles"];
 
 export const MAX = BIRDS_DATA.length-1;
 export const POINT = 1;

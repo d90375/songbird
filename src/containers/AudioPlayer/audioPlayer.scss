@@ -15,7 +15,8 @@
   transition: 0.2s;
   width: 40px;
   height: 40px;
-  border: 2px solid $second;
+  border: 2px solid #FFF;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,13 +32,13 @@
   transition: 0.2s;
   width: 20px;
   height: 20px;
-  color: $second;
+  color: #FFF;
 }
 
 .playback-button:hover svg {
   width: 20px;
   height: 20px;
-  color: lighten($second,10%);
+  color: lighten($first,10%);
   transform: scale(1.03);
 }
 
@@ -51,7 +52,7 @@
 }
 
 .timebar-circle {
-  background-color: $second;
+  background: linear-gradient(to top, #ff8200, #ff6412, orange, gold);
   width: 14px;
   height: 14px;
   border-radius: 50%;

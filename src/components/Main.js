@@ -20,7 +20,7 @@ const Main = ({ birdsList }) => {
   return (
     <>
       <Question audio={audio} name={name} image={image} nextLevel={nextLevel} />
-      <div className="row mb2">
+      <div className="row-mb-2 bottom-container">
         <List
           step={level}
           birdsList={birdsList}
