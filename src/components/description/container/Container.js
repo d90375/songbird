@@ -19,7 +19,7 @@ const Container = ({ birdsList, isClickedIndex }) => {
     setSpecies(species);
     setDescription(description);
     setBirth(birth);
-  }, [isClickedIndex]);
+  }, [birdsList, isClickedIndex]);
 
   return (
     <>

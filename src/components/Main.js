@@ -12,7 +12,7 @@ const Main = ({ birdsList }) => {
 
   useEffect(() => {
     console.log(`if you need to test the game the WINNER is ${birdsList[targetIndex].name} !`);
-  }, [level]);
+  }, [birdsList, targetIndex, level]);
 
   const successPlayer = useRef();
   const cancelPlayer = useRef();

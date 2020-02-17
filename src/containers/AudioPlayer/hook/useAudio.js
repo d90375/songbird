@@ -12,7 +12,8 @@ function useAudio(url) {
 
   React.useEffect(() => {
     setLoading(true);
-  }, [ url]);
+  }, [url]);
+
 
   return [
     <audio

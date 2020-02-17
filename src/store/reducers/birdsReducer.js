@@ -36,8 +36,8 @@ const birdsReducer = (state, action) => {
       }
       stateCopy.answer = action.payload.index;
       if (action.payload.index === stateCopy.targetIndex) {
-        stateCopy.isStop = true;
         action.payload.successPlayer.current.play();
+        stateCopy.isStop = true;
         stateCopy.score = stateCopy.score + MAX - POINT * stateCopy.answerList.length;
         stateCopy.nextLevel = true;
       } else {

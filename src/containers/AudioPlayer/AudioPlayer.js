@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import useAudio from "./hook/useAudio";
 import TimeBar from "./TimeBar";
 import PlaybackButton from "./PlaybackButton";
@@ -7,11 +7,12 @@ import BirdsContext from "../../store/context/BirdsContext";
 
 function AudioPlayer({ url }) {
   const [audioElement, audioProps] = useAudio(url);
-
-  const {isStop} = useContext(BirdsContext);
+  const { isStop} = useContext(BirdsContext);
 
   useEffect(() => {
-    audioProps.togglePlaybackStatus();
+    if (audioProps.playbackStatus === 'play') {
+      audioProps.togglePlaybackStatus("pause");
+    }
   }, [isStop]);
 
   return (

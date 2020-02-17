@@ -15,7 +15,7 @@ const Info = ({ name, species, audio, speciesVisible, nextLevel , birth }) => {
               <h5>{species}</h5>
             </ListGroup.Item>
             <ListGroup.Item>
-              <h5>{species}</h5>
+              <h5>{birth}</h5>
             </ListGroup.Item>
           </>
         )}

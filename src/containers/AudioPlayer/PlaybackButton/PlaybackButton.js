@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 
 const PauseIcon = props => (
   <svg viewBox="0 0 47.607 47.607" {...props}>
@@ -26,15 +25,6 @@ function PlaybackButton({ playbackStatus, onClick }) {
     </div>
   );
 }
-
-PlaybackButton.defaultProps = {
-  playbackStatus: "stop",
-  onClick: () => {}
-};
-
-PlaybackButton.propTypes = {
-  playbackStatus: PropTypes.string,
-  onClick: PropTypes.func
-};
+;
 
 export default PlaybackButton;
