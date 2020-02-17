@@ -8,16 +8,20 @@ import rndImg from "../../assetes/img/bird.06a46938.jpg";
 
 const Question = ({ nextLevel, audio, name, image }) => {
   return (
-    <Jumbotron className="random-question d-flex">
-      {nextLevel ? (
-        <Poster alt={name} image={image} />
-      ) : (
-        <Image className="random-image" rounded thumbnail fluid alt={rndImg} src={rndImg} />
-      )}
-      <div className="random-container">
-        <Info audio={audio} name={name} nextLevel={nextLevel} speciesVisible={false} />
+    <div className='top row-mb-2'>
+      <div className='top-container col-md-3' >
+        {nextLevel ? (
+          <Poster alt={name} image={image} />
+        ) : (
+          <Image className="random-image"  alt={rndImg} src={rndImg} />
+        )}
       </div>
-    </Jumbotron>
+      <Jumbotron className="random-question d-flex col-mb-9">
+        <div className="random-container">
+          <Info audio={audio} name={name} nextLevel={nextLevel} speciesVisible={false} />
+        </div>
+      </Jumbotron>
+    </div>
   );
 };
 

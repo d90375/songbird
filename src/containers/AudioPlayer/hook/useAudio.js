@@ -1,6 +1,4 @@
 import * as React from "react";
-import { useContext } from "react";
-import BirdsContext from "../../../store/context/BirdsContext";
 
 function useAudio(url) {
   const audioRef = React.useRef(null);
@@ -14,7 +12,8 @@ function useAudio(url) {
 
   React.useEffect(() => {
     setLoading(true);
-  }, [ url]);
+  }, [url]);
+
 
   return [
     <audio

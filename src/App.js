@@ -14,6 +14,7 @@ const App = () => {
 
   const [rnd, setRnd] = useState(null);
 
+
   useEffect(() => {
     setRnd(getRandomIndex(BIRDS_DATA, level));
   }, [level]);

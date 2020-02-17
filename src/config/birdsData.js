@@ -2,301 +2,376 @@ const BIRDS_DATA = [
   [
     {
       id: 0,
-      name: 'Ворон',
-      species: 'Corvus corax',
-      description: 'Ворон – крупная птица. Длина тела достигает 70 сантиметров, размах крыльев – до полутора метров. Вороны населяют окрестности Тауэра. В Англии бытует поверье, что в день, когда черные вороны улетят от Тауэра, монархия рухнет.',
-      image: 'https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3'
+      name: "Darth Vader",
+      species: "Human",
+      birth: "41.9BBY",
+      description:
+        'Darth Vader is a fictional character in the Star Wars franchise. He is a primary antagonist in the original trilogy, but, in his birth identity as Anakin Skywalker, is one of the main protagonists in the prequel trilogy alongside. Films of the franchise as "the tragedy of Darth Vader"',
+      image: "https://live.staticflickr.com/65535/49543965698_0fdbd99ed5.jpg",
+      audio: "https://dl.dropboxusercontent.com/s/wajd35fjq82u7l1/Dont%20fail%20me%20again.mp3"
     },
     {
       id: 1,
-      name: 'Журавль',
-      species: 'Grus grus',
-      description: 'Звуки, издаваемые журавлем, похожи на звонкое «кур-лы – кур-лы». Журавли чаще всего поют дуэтом – одна птица начинает запев со слога «кур», а вторая подхватывает «лы». Если птица поёт одна, то она издает только звук «кур».',
-      image: 'https://live.staticflickr.com/65535/49221158846_b0b69a58f1.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC512582-190604_1087_Grus_tok.mp3'
+      name: "Luke Skywalker",
+      species: "Human",
+      birth: "19BBY",
+      description:
+        "Luke Skywalker is a fictional character and the main protagonist of the original film trilogy of the Star Wars franchise created by George Lucas. Portrayed by Mark Hamill, Luke first appeared. The Force Awakens (2015), The Last Jedi (2017), and The Rise of Skywalker (2019).",
+      image: "https://live.staticflickr.com/65535/49543965698_0fdbd99ed5.jpg",
+      audio: "https://dl.dropbox.com/s/305gjxtzataf6go/Become%20a%20Jedi.mp3"
     },
     {
       id: 2,
-      name: 'Ласточка',
-      species: 'Delichon urbicum',
-      description: 'Для ласточек характерно негромкое щебетание. Песни ласточек не смолкают на протяжении всего лета. Исследователи различают у птиц до 6 щебечущих звуков: «вит», «ви-вит», «чивит», «чиривит» и т.п. Ласточки любят петь дуэтом.',
-      image: 'https://live.staticflickr.com//65535//48539007512_5029d2a9a0.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3'
+      name: "C-3PO",
+      species: "Droid",
+      birth: "112BBY",
+      description:
+        "C-3PO (/ˌsiːˈθriːpioʊ/) or See-Threepio[1] is a fictional character in the Star Wars franchise who appears in the original trilogy, the prequel trilogy and the sequel trilogy. Built by Anakin Skywalker, C-3PO was designed as a protocol. He is frequently featured as a main character in various other Star Wars media.",
+      image: "https://live.staticflickr.com/65535/49544690802_27915b380d.jpg",
+      audio: "https://dl.dropbox.com/s/hu0h7bfsxwv8kso/Im%20C3PO.mp3"
     },
     {
       id: 3,
-      name: 'Козодой',
-      species: 'Caprimulgus europaeus',
-      description: 'Козодой – неприметная птица, известная благодаря своему голосу. Песня козодоя звучит как монотонная трель похожая на тарахтение мотоцикла. Такое дребезжание слышно от заката до рассвета, его тональность, частота и громкость изменяются. ',
-      image: 'https://live.staticflickr.com/65535/48456345286_dbc8530027.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC486956-190623_22.37h_nachtzwaluw_rechte%20heide_zang_ad%20_2ex_gezien_.mp3'
+      name: "R2-D2",
+      species: "Droid",
+      birth: "33BBY",
+      description:
+        "R2-D2 (/ˌɑːtuːˈdiːtuː/) or Artoo-Detoo[1] is a fictional droid character in the Star Wars franchise created by George Lucas. He has appeared in ten of the eleven Star Wars films to date. At various points throughout the course of the films, R2 is a friend.",
+      image: "https://live.staticflickr.com/65535/49543961008_4d541e4fa9.jpg",
+      audio: "https://dl.dropbox.com/s/3tt7uaqwkuoc8uu/Unbelievable%20R2D2.mp3"
     },
     {
       id: 4,
-      name: 'Кукушка',
-      species: 'Cuculus canorus',
-      description: 'Кукушку назвали так из-за особенностей ее песен. Звонкое «ку-ку» не спутать ни с какой другой птицей. Кукушки не строят гнезда, их потомство выращивают другие виды пернатых, которым кукушки подбрасывают свои яйца.',
-      image: 'https://live.staticflickr.com/65535/48377838151_e15f430ec1.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC501461-190616_08.13h_koekoek_brabantse%20biesbosch%20jantjesplaat_roep_1%20ex_ad%20m_ter%20plaatse%20zingend_gezien_.mp3'
+      name: "Leia Organa",
+      species: " Human",
+      birth: "19BBY",
+      description:
+        "Princess Leia Organa[a][b] is a fictional character in the Star Wars franchise, portrayed in films by Carrie Fisher. Introduced in the original Star Wars film[c] in 1977, Leia is princess of the planet Alderaan, a member of the Imperial Senate and an agent.",
+      image: "https://live.staticflickr.com/65535/49543961008_4d541e4fa9.jpg",
+      audio: "https://dl.dropbox.com/s/etcjg7h1e9r4bc5/Help%20me%20Obi%20Wan.mp3"
     },
     {
       id: 5,
-      name: 'Синица',
-      species: 'Parus major',
-      description: 'В щебетании синиц различают более 40 различных звуковых сочетаний. Поют они практически круглый год, немного затихая только зимой. Синицы настоящие санитары леса. Одна пара синиц в период гнездования оберегает от вредителей десятки деревьев.',
-      image: 'https://live.staticflickr.com//65535//49366042493_c48c81d58d.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC518417-Kj%C3%B8ttmeis%20XC%20Helg%C3%B8ya%20Elias%20A.%20Ryberg20200108133922_079.mp3'
+      name: "Obi-Wan Kenobi",
+      species: "Human",
+      birth: "57BBY",
+      description:
+        "Obi-Wan Kenobi (/ˈoʊbiːˌwɑːn kəˈnoʊbiː/), also known as Ben Kenobi, is a character in the Star Wars franchise.[4] Within the original trilogy, Obi-Wan serves as a supporting character and is portrayed by English actor Alec Guinness. In in the later-released.",
+      image: "https://live.staticflickr.com/65535/49543966118_323a9edee8.jpg",
+      audio: "https://dl.dropbox.com/s/yji553o4pi4kfkv/Use%20the%20force.mp3"
     }
   ],
   [
     {
       id: 0,
-      name: 'Воробей',
-      species: 'Passer domesticus',
-      description: 'Воробьи являются самыми известными и узнаваемыми пернатыми. Их легко узнать по пестрому оперению и задорному чириканью. Воробьи относятся к синатропному виду — они селятся поблизости к человеческому жилищу.',
-      image: 'https://live.staticflickr.com//65535//49366595303_06cf65b07e.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/CXFHOPIVAS/XC503224-191020_0134.mp3'
+      name: "Anakin Skywalker",
+      species: "Human",
+      birth: "41.9BBY",
+      description:
+        "Anakin Skywalker, a Force-sensitive human male, was a Jedi Knight of the Galactic Republic and the Chosen One of the Force.During the Clone Wars, his accomplishments as a battlefield commander earned him the Hero With No Fear moniker. After turning to the dark side of the Force, he became known as Darth Vader.",
+      image: "https://live.staticflickr.com/65535/49544537811_c0693dc6d2.jpg",
+      audio: "https://dl.dropbox.com/s/0218lzedlu0yb34/Anakin%20Forgotten%20me.mp3?dl=0"
     },
     {
       id: 1,
-      name: 'Грач',
-      species: 'Corvus frugilegus',
-      description: 'Грачи очень умные и сообразительные птицы. С помощью клюва они создают и используют простейшие орудия. У грачей развит рефлекс на звуки трактора. Услышав «тарахтение», они летят на звук – трактор пашет землю, значит, в этом месте много корма.',
-      image: 'https://live.staticflickr.com//65535//49347123322_291c86b016.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/RLRHCUIPIY/XC512540-gawron%20Suble%2019.12.19%20%2012.35.mp3'
+      name: "Chewbacca",
+      species: "Wookiee",
+      birth: "200BBY",
+      description:
+        'Chewbacca (/tʃuːˈbɑːkə/), nicknamed "Chewie", is a fictional character in the Star Wars franchise. He is a Wookiee, a tall, hirsute, bipedal, intelligent species originating from the fictional planet of Kashyyyk. Chewbacca is the loyal friend and first mate of Han Solo.',
+      image: "https://live.staticflickr.com/65535/49544538246_b986d47bfa.jpg",
+      audio: "https://dl.dropbox.com/s/ilnnvrpktzkp3r9/wookie1.wav?dl=0"
     },
     {
       id: 2,
-      name: 'Галка',
-      species: 'Coloeus monedula',
-      description: 'Слово «галка» произошло из старославянского языка и переводится как «чёрный». Этим словом часто называют воронов или других черных птиц. Латинское название галки «monedula» связывают со словами монета за любовь птицы к блестящим и ярким вещам.',
-      image: 'https://live.staticflickr.com//65535//49237149586_993cf685c5.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC510498-Coloeus%20monedula_2019.11.13_11.55_01.mp3'
+      name: "Han Solo",
+      species: "Human",
+      birth: "29BBY",
+      description:
+        "Han Solo is a fictional character and protagonist in the Star Wars franchise. A primary character in the original film trilogy, Han is the captain of the Millennium Falcon, along with his Wookiee co-pilot Chewbacca. In the original Star Wars film.",
+      image: "https://live.staticflickr.com/65535/49544538546_759270815b.jpg",
+      audio: "https://dl.dropbox.com/s/l085bruefj8rdi8/Never%20tell%20me%20the%20odds.mp3?dl=0"
     },
     {
       id: 3,
-      name: 'Певчий дрозд',
-      species: 'Turdus philomelos',
-      description: 'Дрозд — лучший певец из отряда воробьиных. Песня состоит только из красивых звучных свистов и коротких трелей. Чаще всего её можно услышать в утреннее и вечернее время. Поют дрозды в течении всего периода гнездования.',
-      image: 'https://live.staticflickr.com/65535/48979125763_e2534f54bd.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513326-190704_1146_TF-Glogow.mp3'
+      name: "Jabba Desilijic Tiure",
+      species: "Hutt",
+      birth: "600BBY",
+      description:
+        "Jabba Desilijic Tiure, more commonly referred to as Jabba the Hutt or simply Jabba, and formally styled as His Excellency Jabba Desilijic Tiure of Nal Hutta, Eminence of Tatooine, was a Hutt gangster and crime lord.",
+      image: "https://live.staticflickr.com/65535/49544764707_31809dbb86.jpg",
+      audio: "https://dl.dropbox.com/s/sm53vqsdb5ox5xf/Mighty%20Chewbacca.mp3?dl=0"
     },
     {
       id: 4,
-      name: 'Сорока',
-      species: 'Pica pica',
-      description: 'Сорока очень трудолюбивая птица. Она строит до восьми гнёзд, а потом выбирает из них самое лучшее. Вход в гнездо сорок всегда обращен на юг, чтобы в жилище было теплее. Сороки являются единственными птицами, которые узнают себя в зеркале.',
-      image: 'https://live.staticflickr.com//65535//49360363066_ff02bb6a73.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC500868-Pica%20pica2019.08.23_09.18_02.mp3'
+      name: "Palpatine",
+      species: "Human",
+      description:
+        "Сорока очень трудолюбивая птица. Она строит до восьми гнёзд, а потом выбирает из них самое лучшее. Вход в гнездо сорок всегда обращен на юг, чтобы в жилище было теплее. Сороки являются единственными птицами, которые узнают себя в зеркале.",
+      image: "https://live.staticflickr.com/65535/49544764937_45d304532f.jpg",
+      audio: "https://dl.dropbox.com/s/491ekocbt1xzkrt/Gooood.mp3?dl=0"
     },
     {
       id: 5,
-      name: 'Сойка',
-      species: 'Garrulus glandarius',
-      description: 'Когда сойка волнуется, хохолок на её голове взъерошивается. Птица старается создать устрашающее зрелище. Сойки умеют имитировать голоса других птиц, животных и звуки, которые создает человек. На зиму они делают большие запасы желудей и орехов.',
-      image: 'https://live.staticflickr.com//65535//49369678956_9a7465c7f4.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/TFOGOENSTQ/XC501517-191008_1590%201300.%20Eichelh%C3%A4her%20D%2C%20NW%2C%20LEV.%20Stephan%20Risch.mp3'
+      name: "Yoda",
+      species: "Yoda's Species",
+      birth: "82BBY",
+      description:
+        "Yoda (/ˈjoʊdə/) is a fictional character in the Star Wars universe, first appearing in the 1980 film The Empire Strikes Back. He is a small, green humanoid alien with tremendous power in the Force. In his first appearance in the original trilogy, the spirit of Jedi master Obi-Wan Kenobi.",
+      image: "https://live.staticflickr.com/65535/49544765207_e7b040d292.jpg",
+      audio: "https://dl.dropbox.com/s/1wjhepwnbqhp3sg/Always%20in%20Motion.mp3?dl=0"
     }
   ],
   [
     {
       id: 0,
-      name: 'Зяблик',
-      species: 'Fringilla coelebs',
-      description: 'В дикой природе насчитывается 450 видов зябликов. Зимой зяблики ведут стайный образ жизни. Иногда в их семьях можно увидеть воробьев. Запевают зяблики весной, с наступлением брачного периода. Их пение – это заливистые многоминутные рулады.',
-      image: 'https://live.staticflickr.com/65535/49143150817_2d3a2f6c1e.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC512407-150622_03%20zi%C4%99ba%20%282%29.mp3'
+      name: "Trandoshan",
+      species: "Reptile",
+      birth: "Dosh",
+      description:
+        "Trandoshans, also called T'doshok, were large, bipedal reptilian sentient humanoids from the planet Trandosha, and were renowned as great hunters. Garnac was a Trandoshan hunter who operated a game preserve on the moon Wasskah  and oversaw his son's fatally failed rite of.",
+      image: "https://live.staticflickr.com/65535/49544062143_5c55ceebde.jpg",
+      audio: "https://dl.dropbox.com/s/eh58gdknqgkf89m/63919.mp3?dl=0"
     },
     {
       id: 1,
-      name: 'Клёст',
-      species: 'Loxia curvirostra',
-      description: 'Клестов называют «рождественскими» птицами. В естественных условиях они дают потомство зимой – в январе. Эти птицы утепляют свои гнезда мхом и шерстью животных, потому птенцам не холодно. В поисках шишек клесты могут улетать за 3500 км от гнезда.',
-      image: 'https://live.staticflickr.com//65535//49365470123_f2de66bb35.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/OTVUCEGYZN/XC495381-Kruisbek%20roep%20NHD%20290619.mp3'
+      name: "Ewok",
+      species: "Mammal",
+      birth: "Ewokese",
+      description:
+        "Ewoks are a fictional species of small, mammaloid bipeds that appear in the Star Wars universe. They are hunter gatherers resembling teddy bears that inhabit the forest moon of Endor and live in various arboreal huts and other simple dwellings. They first appeared in the 1983 film Return of the Jedi and have since appeared in two made for television films.",
+      image: " https://live.staticflickr.com/65535/49544061673_6842705753.jpg",
+      audio: "https://dl.dropbox.com/s/qyf8dkft9galh82/ewok1.wav?dl=0"
     },
     {
       id: 2,
-      name: 'Горлица',
-      species: 'Streptopelia turtur',
-      description: 'Горлица обитает в смешанных и широколиственных лесах, а также в городских парках и поселках. Птицы часто выбирают места жизни рядом с человеком и легко привыкают к людям. Благодаря мелодичному приятному пению горлиц часто разводят в домашних условиях.',
-      image: 'https://live.staticflickr.com/65535/48063004977_84252f9ceb.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC324106-Turkawka_Streptopelia_turtur_Poland_Jarek_Matusiak_2011625_07.mp3'
+      name: "Neimodian",
+      species: "Sentient",
+      birth: "Neimoidia",
+      description:
+        "Neimoidians were a humanoid species native to the planet of Neimoidia, while also settling wealthy purse-worlds like Cato Neimoidia. They had smooth noseless faces, mottled green-gray skin, and large red-orange eyes. In the waning years of the Galactic Republic, they ran the Trade Federation, a vast consortium of business interests.",
+      image: "https://live.staticflickr.com/65535/49544564401_e6ec514df4.jpg",
+      audio: "https://dl.dropbox.com/s/xg9jamb7xz7iecx/Wat%20Tambor%20.mp3?dl=0"
     },
     {
       id: 3,
-      name: 'Дятел',
-      species: 'Dendrocopos major',
-      description: 'Дятел – заметная и шумная птица, часто живет рядом с человеком. С середины января до конца июня можно услышать «барабанную дробь» дятлов – трель от вибрации веток под быстрыми ударами клюва птицы. В хорошую погоду дробь слышна в радиусе 1,5 км.',
-      image: 'https://live.staticflickr.com/65535/49339376578_e933426455.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC518928-AB-017%20dzi%C4%99cio%C5%82%20du%C5%BCy%20agresja%20%282%29.mp3'
+      name: "Gungan",
+      species: "Amphibian",
+      birth: "Gungan Basic",
+      description:
+        "Gungans were an amphibious sentient species and the native inhabitants of the planet Naboo. The various different Gungan races could live on both water and land, but often made their home in underwater cities such as Otoh Gunga. Physically, Gungans were tall humanoids with a flexible structure, strong leg muscles, strong bills, muscular tongues, and many other traits designed for living in the waters of Nabo.",
+      image: "https://live.staticflickr.com/65535/49544791367_b2b3e0cb2a.jpg",
+      audio: "https://dl.dropbox.com/s/jz2swqdvlaxq9n5/Die%20in%20here.mp3?dl=0"
     },
     {
       id: 4,
-      name: 'Удод',
-      species: 'Upupa epops',
-      description: 'Удоды предпочитают жить на открытых ландшафтах с отдельными деревьями или рощами. Наиболее удобными для птицы являются лесостепь и саванна. Удод может выбирать места жительства рядом с человеком: пастбища, виноградники, фруктовые сады.',
-      image: 'https://live.staticflickr.com//65535//49226383598_6f8be86a06.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC477326-dudek%20%282%29.mp3'
+      name: "Toydarian",
+      species: "Mammal",
+      birth: " Toydarian",
+      description:
+        "Watto is a fictional character in the Star Wars franchise, featured in the films The Phantom Menace and Attack of the Clones. He is computer-generated and is voiced by voice actor Andy Secombe. He is a mean-tempered, greedy Toydarian, and owner of a second-hand goods store in Mos Espa on the planet Tatooine..",
+      image: "https://live.staticflickr.com/65535/49544791607_d14903189d.jpg",
+      audio: "https://dl.dropbox.com/s/l14wi9a08jx2c1i/Star%20wars%20Sound%20Effects%20Watto.mp3?dl=0"
     },
     {
       id: 5,
-      name: 'Стриж',
-      species: 'Apus apus',
-      description: 'Стрижа можно увидеть практически в каждом уголке планеты. Они обитают как в лесных зонах, так и на открытых местностях. Живут стрижи крупными стаями. Большие колонии этих птиц можно увидеть в городах или на прибрежных скалах.',
-      image: 'https://live.staticflickr.com//65535//48386150031_7b749df74b.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/TMUAWSDHDJ/XC511871-G.mp3'
+      name: "Zabrak",
+      species: "Mammal",
+      birth: "Dugese",
+      description:
+        "Zabrak are near-human sentients from the planet Iridonia renowned for their independence and wandering spirit. They have distinctive facial horns, whose number and pattern denote which subspecies an individual Zabrak belongs to. Most Zabrak wear ritual facial tattoos, which vary from simple lines to more elaborate patterns.",
+      image: "https://live.staticflickr.com/65535/49544066308_d0a77c5e39.jpg",
+      audio: "https://dl.dropbox.com/s/i6m4xj6i6spbsfc/Afraid.mp3?dl=0"
     }
   ],
   [
     {
       id: 0,
-      name: 'Жаворонок',
-      species: 'Alauda arvensis',
-      description: 'Жаворонки — перелетные птицы. С начала сентября они отлетают на юг. Возвращаются они в начале марта, независимо от того, сошел снег или нет. По прилету жаворонков определяли наступление весны и пору, когда пора пахать землю.',
-      image: 'https://live.staticflickr.com/65535/47105096764_f751fba568.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC462158-Skowronek_Alauda_arvensis_Poland_Jarek_Matusiak_%20-006%20skowronek%20%282%29.mp3'
+      name: "Executor",
+      species: "Star Dreadnought",
+      birth: "1,143,350,000 credits",
+      description:
+        "An executor is a legal term referring to a person named by the maker of a will or nominated by the testator to carry out the instructions of the will. Typically, the executor is the person responsible for offering the will for probate, although it is not required that they fulfill this.",
+      image: "https://live.staticflickr.com/65535/49544098928_9975a34a6b.jpg",
+      audio:
+        "https://dl.dropbox.com/s/bir44m0937vknck/Star%20Wars%20Imperial%20Executor%20-%20Tribute%20Theme%20%281%29.mp3?dl=0"
     },
     {
       id: 1,
-      name: 'Соловей',
-      species: 'Luscinia luscinia',
-      description: 'Соловьи поют с начала мая и до конца лета. Каждая песня соловья состоит из 12 повторяющихся элементов, которые еще называют коленами. Кроме собственных трелей, соловьи легко и хорошо перенимают пение других птиц.',
-      image: 'https://live.staticflickr.com/7605/27669397735_f3c21758f2.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/HILVWSADVL/XC513809-R07_0052%20Thrush%20Nightingale%20Snipe.mp3'
+      name: "Death Star",
+      species: "DS-1 Orbital Battle Station",
+      birth: "1,000,000,000,000 credits",
+      description:
+        "The Death Star is a fictional mobile space station and galactic superweapon featured in the Star Wars space-opera franchise. The first Death Star, introduced in the original Star Wars film,[a] is stated to be more than 120 kilometers and 400,000 droids.",
+      image: "https://live.staticflickr.com/65535/49544601581_3bcb1c3bc6.jpg",
+      audio: "https://dl.dropbox.com/s/y9dfr4wfwtjcdvt/369040_4992105-lq.mp3?dl=0"
     },
     {
       id: 2,
-      name: 'Скворец',
-      species: 'Sturnus vulgaris',
-      description: 'Скворцы - перелётные птицы. Синхронный перелет больших стай скворцов называется мурмурацией. Это красивое и завораживающее явление – множество птиц будто танцуют в воздухе, образуя замысловатые фигуры, которые уменьшаются и увеличиваются в небе.',
-      image: 'https://live.staticflickr.com/65535/49357593971_9509fe1d7c.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC515519-2020.01.01_17.24_01.MP3'
+      name: "Millennium Falcon",
+      species: "YT-1300 light freighter",
+      birth: "100,000 credits",
+      description:
+        "The Millennium Falcon is a fictional starship in the Star Wars franchise. Designed by Joe Johnston for the movie Star Wars (1977), she has subsequently appeared in The Star Wars Holiday Special (1978), The Empire Strikes Back (1980).",
+      image: "https://live.staticflickr.com/65535/49544827867_ecc1511ea5.jpg",
+      audio:
+        "https://dl.dropbox.com/s/lurauumnik8eeqr/Sound%20Effects%20Millennium%20Falcon%20escapes%20the%20Death%20Star%20STAR%20WARS.mp3?dl=0"
     },
     {
       id: 3,
-      name: 'Иволга',
-      species: 'Oriolus oriolus',
-      description: 'Мелодичность голоса иволги сравнивают со звучанием флейты. Человеку сложно разглядеть иволгу, так как она обитает высоко на деревьях. Иволга не только очень красивая, но и  полезная птица. Она уничтожает ядовитых гусениц, которых не поедают другие птицы.',
-      image: 'https://live.staticflickr.com/65535/47102184004_58a93380b9.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC491801-2019.07.07_06.28_01.mp3'
+      name: "X-wing",
+      species: "T-65 X-wing",
+      birth: "149,999 credits",
+      description:
+        "Star Wars: X-Wing is a miniature war game designed by Jay Little and produced by Fantasy Flight Games that was released at Gen Con in 2012.[2] It features tactical ship-to-ship dogfighting between various types of starfighters set in the fictional Star Wars universe.",
+      image: "https://live.staticflickr.com/65535/49544602746_6f66ca8a63.jpg",
+      audio: "https://dl.dropbox.com/s/uhhtsbull7wpj0g/Sound%20Effects%20X-Wing%20STAR%20WARS.mp3?dl=0"
     },
     {
       id: 4,
-      name: 'Свиристель',
-      species: 'Bombycilla garrulus',
-      description: 'У свиристели очень цепкие коготки, что помогает птице удерживаться на ветках и склевывать ягоды, которые труднее всего достать. В период ухаживаний самец предлагает самке ягоду или другое угощение. Если самка его принимает, то птицы создают пару.',
-      image: 'https://live.staticflickr.com//65535//49367433842_1b06da0e6b.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC517421-AB-004%20%282%29%20jemio%C5%82uszka.mp3'
+      name: "TIE Advanced x1",
+      species: "Twin Ion Engine Advanced x1",
+      birth: "Unknown",
+      description:
+        "TIE fighters are fictional starfighters existing in the Star Wars universe. Propelled by Twin Ion Engines, TIE fighters are fast, agile, yet fragile starfighters produced by Sienar Fleet Systems for the Galactic Empire. TIE fighters and other TIE craft appear in Star Wars films.",
+      image: "https://live.staticflickr.com/65535/49544602451_8502e22f24.jpg",
+      audio: "https://dl.dropbox.com/s/kkojmtrzlhsht7u/tie.wav?dl=0"
     },
     {
       id: 5,
-      name: 'Щегол',
-      species: 'Carduelis carduelis',
-      description: 'Щеглы поют красиво и мелодично. И в природе, и в неволе они щебечут почти круглый год. В пении щегла различают более 20 переливчатых трелей. Щеглы привыкают к людям, и даже могут возвратиться к хозяину после того, как их выпустили на волю',
-      image: 'https://live.staticflickr.com//65535//49366257253_db3ce48b9a.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489265-190724_07.58h_putter_biesbosch_%20boompjes%20langs%20open%20water_zang_1ex_ad_niet%20gezien_.mp3'
+      name: "Imperial shuttle",
+      species: "Lambda-class T-4a shuttle",
+      birth: "240,000 credits",
+      description:
+        "The Lambda-class T-4a shuttle, also known as the Imperial Lambda, Imperial Transport or the Imperial Shuttle, was a multi-purpose transport with a trihedral foil design used by the Galactic Empire.",
+      image: "https://live.staticflickr.com/65535/49544602111_3591bbd4bd.jpg",
+      audio:
+        "https://dl.dropbox.com/s/4bpkoqmucu1tbqt/Sound%20Effects%20Imperial%20Lambda%20T%204%20Shuttle%20STAR%20WARS.mp3?dl=0"
     }
   ],
   [
     {
       id: 0,
-      name: 'Орёл',
-      species: 'Aquila nipalensis',
-      description: 'В древние времена орел был символом солнца. Орлы часто парят над землей, при этом скорость их перемещения может достигать 240 км/ч. Иллюзия медленного движения происходит из-за высоты полета – более 700 метров',
-      image: 'https://live.staticflickr.com//4835//43867392960_7105d71e19.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/KTBTZAHSXF/10_Aquila_nipalensis_al02D85.mp3'
+      name: "Alderaan",
+      species: "Temperate",
+      birth: "12,500km",
+      description:
+        "Alderaan is a fictional planet featured in the Star Wars franchise. It is blue-green in appearance, depicted as a terrestrial planet with humanoid inhabitants, and characterized by a peaceful culture. It is the home planet of Princess Leia Organa.",
+      image: "https://live.staticflickr.com/65535/49544113743_2eba4b9ec3_w.jpg",
+      audio: "https://dl.dropbox.com/s/87ey8l11swt9q2f/Enceladus%20Hiss%20audio%20256%20kbps.mp3?dl=0"
     },
     {
       id: 1,
-      name: 'Коршун',
-      species: 'Milvus migrans',
-      description: 'Коршуны – крупные хищники, в высоту они достигают около полуметра, а вес взрослых особей достигает 1 кг. Крылья узкие и длинные, их размах составляет 1,5 м. Коршуны часто гнездятся большими стаями и даже образуют крупные колонии.',
-      image: 'https://live.staticflickr.com//65535//48701190276_ee2a9ed594.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/SDPCHKOHRH/XC485740-2019-06-22%20Selenga%20Milan%20brun%20cris%20de%20quemandage%203.mp3'
+      name: "Yavin IV",
+      species: "Temperate, Tropical",
+      birth: "10,200km",
+      description:
+        'Yavin (also known as "Yavin Prime", to distinguish it from its moons) is a fictional planet in the Star Wars galaxy. It first appeared in the 1977 film Star Wars[a] and is depicted as a large red gas giant with an extensive satellite system of moons.',
+      image: "https://live.staticflickr.com/65535/49544616101_7c0bd1f3a1_w.jpg",
+      audio: "https://dl.dropbox.com/s/fhvh2n3yr22vpez/bowshock_PIA20754.wav?dl=0"
     },
     {
       id: 2,
-      name: 'Лунь',
-      species: 'Circus cyaneus',
-      description: 'Лунь – это небольшой сокол. Питается в основном мышевидными грызунами, основа его рациона – полёвки, хомяки, мыши. Оперение луня может быть пепельно-серым. С такой птицей связано сравнение «седой, как лунь».',
-      image: 'https://live.staticflickr.com/65535/49322743903_32f3922d9e.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513498-190709_1175_Cir.cyan-f.mp3'
+      name: "Hoth",
+      species: "Frozen",
+      birth: "7,200km",
+      description:
+        "Zabrak are near-human sentients from the planet Iridonia renowned for their independence and wandering spirit. They have distinctive facial horns, whose number and pattern denote which subspecies an individual Zabrak belongs to. Most Zabrak wear ritual facial tattoos, which vary from simple lines to more elaborate patterns.",
+      image: "https://live.staticflickr.com/65535/49544616231_1d8349ea20_w.jpg",
+      audio: "https://dl.dropbox.com/s/ltae0jyrw316976/magnetosphere_PIA20753.wav?dl=0"
     },
     {
       id: 3,
-      name: 'Сокол',
-      species: 'Falco peregrinus',
-      description: 'Латинское название сокола Falco произошло от слова «серп» из-за серповидной формы крыльев. Длинные и широкие крылья позволяют соколу высоко подниматься в небо и свободно парить. Скорость полёта сокола достигает 280-320 километров в час.',
-      image: 'https://live.staticflickr.com//65535//49310710607_92a3a145a9.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC496049-Pilgrimsfalk_06.mp3'
+      name: "Arcal",
+      species: "Falco peregrinus",
+      birth: "8,900km",
+      description: "Hoth was a remote, icy planet that was the sixth planet in the star system of the same name. .",
+      image: "https://live.staticflickr.com/65535/49544616391_441762e52c_w.jpg",
+      audio: "https://dl.dropbox.com/s/mxk6pxgyoum9qap/603921main_voyager_jupiter_lightning.mp3?dl=0"
     },
     {
       id: 4,
-      name: 'Ястреб',
-      species: 'Accipiter gentilis',
-      description: 'Для всех ястребов характерны широкие и короткие крылья. Ещё один отличительный признак - белые «брови» над глазами. Славянские дружинники размещали изображение ястреба на своих знаменах, как символ отваги, мощи и безжалостности к врагам.',
-      image: 'https://live.staticflickr.com//65535//49024617331_b9d0d2c9b3.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC512740-Duvh%C3%B6k_09.mp3'
+      name: "Dagobah",
+      species: "Murky",
+      birth: "118,000km",
+      description:
+        "Dagobah is a fictional planet and eponymous star system appearing in the Star Wars films The Empire Strikes Back and Return of the Jedi, a deleted scene from Revenge of the Sith, and other media. It is depicted as a world of murky swamps,.",
+      image: "https://live.staticflickr.com/65535/49544615591_2fde7e2dcc_w.jpg",
+      audio: "https://dl.dropbox.com/s/1g4n9sm7wz297vq/578359main_kepler_star_KIC7671081B.mp3?dl=0"
     },
     {
       id: 5,
-      name: 'Филин',
-      species: 'Bubo bubo',
-      description: 'Полет филина бесшумный, зрение очень острое. Эти особенности делают птицу непревзойденным ночным охотником. У филина нет естественных врагов, ни один зверь не охотится на взрослых птиц. А вот на птенцов нападают лисы и волки.',
-      image: 'https://live.staticflickr.com/65535/48137123012_393653c2e4.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/WNLIDKJKXT/XC518386-sense%20t%C3%ADtol.mp3'
+      name: "Geonosis",
+      species: "Arido",
+      birth: "11,370km",
+      description:
+        "Geonosis, referred to as Geonosia by some natives, was the desert home planet of the Geonosians. It was the Confederacy of Independent Systems' first capital and hosted its major.",
+      image: "https://live.staticflickr.com/65535/49544114488_01dea402a7_w.jpg",
+      audio: "https://dl.dropbox.com/s/mxk6pxgyoum9qap/603921main_voyager_jupiter_lightning.mp3?dl=0"
     }
   ],
   [
     {
       id: 0,
-      name: 'Альбатрос',
-      species: 'Diomedea exulans',
-      description: 'Альбатрос - самая крупная летающая птица в мире. Размах крыльев достигает три с половиной, вес - десять килограммов. Большую часть жизни альбатросы проводят в воздухе, покрывая над океанскими просторами огромные расстояния',
-      image: 'https://live.staticflickr.com/7557/16260253965_8e9430cb66.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/WOEAFQRMUD/XC293087-Diomedea%20exulans151120_T254.mp3'
+      name: "AT-AT",
+      species: "Assault Walker",
+      birth: "60km/h",
+      description:
+        "The All Terrain Armored Transport, or AT-AT walker, is a quadruped mechanized infantry combat vehicle used by the Imperial ground forces. Standing over 20 metres (66 ft) tall with blast-impervious armour plating, these massive constructs are used as much for psychological.",
+      image: "https://live.staticflickr.com/65535/49544125433_c5e6e12d9f_w.jpg",
+      audio: "https://dl.dropbox.com/s/grswal2oohj9azz/8d82b5_AT_AT_Sound_Effect.mp3?dl=0"
     },
     {
       id: 1,
-      name: 'Олуша',
-      species: 'Sula nebouxii',
-      description: 'Особенностью голубоногой олуши является не только насыщенный ярко-синий цвет лапок, но еще и тот факт, что они очень теплые. В то время как другие виды птиц греют кладки своим телом, голубоногая олуша делает это с помощью лапок',
-      image: 'https://live.staticflickr.com/800/40645471394_4422e69ed8.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/YHKQPPJDVP/XC411507-171217_1491%20BF%20Booby%205ft%20IDLP%201230%20mp3%20amp.mp3'
+      name: "Sand Crawler",
+      species: "Wheeled",
+      birth: "30km/h",
+      description:
+        "The sandcrawler is a fictional transport vehicle in the Star Wars universe that is found on the desert planet Tatooine. The vehicle, as it appears in its major appearances in Star Wars Episode IV: A New Hope, is 37 meters long and 18 meters tall. ",
+      image: "https://live.staticflickr.com/65535/49544125598_c141b65f2c_w.jpg",
+      audio: "https://dl.dropbox.com/s/vge7q4tq0jy5y58/00194.mp3?dl=0"
     },
     {
       id: 2,
-      name: 'Буревестник',
-      species: 'Puffinus griseus',
-      description: 'Размеры буревестниковых разные. Самые маленькие из них в длину составляют до 25 см, самые большие - до 1 м, при размахе крыльев около 2 м. Существует поверье, что появление буревестника в воздухе предвещает бурю, о чем говорит само название птицы.',
-      image: 'https://live.staticflickr.com//607//22136056020_935cb113f9.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/XQEVNREHJY/SHEARWATER%20Christmas%20Island_04_Motu_Isla%20de%20Pascua-Easter%20Island_CH_4MAR03_Alvaro%20Jaramillo.mp3'
+      name: "T-16 skyhopper",
+      species: "Repulsorcraft",
+      birth: "1,200km/h",
+      description:
+        "The AAT is a Trade Federation vehicle that appears in Star Wars: Episode I – The Phantom Menace, Star Wars: Episode III – Revenge of the Sith, the Star Wars expanded universe, and The Clone Wars. Early drafts of The Phantom Menace described the Trade Federation's.",
+      image: "https://live.staticflickr.com/65535/49544854242_3aa1f31e47_w.jpg",
+      audio:
+        "https://dl.dropbox.com/s/1cs760jnjb4tvrn/T-16%20Skyhopper%20-%20LEGO%20Star%20Wars%20-%2075081%20-%20Product%20Animation.mp3?dl=0"
     },
     {
       id: 3,
-      name: 'Пеликан',
-      species: 'Pelecanus',
-      description: 'Пеликаны — обитатели морей и рек. Ходят они неуклюже, но хорошо летают и плавают. Питаются в основном рыбой, устраивают коллективные охоты — выстроившись полукругом хлопают по воде крыльями и клювами и вытесняют напуганную рыбу на мелководье.',
-      image: 'https://live.staticflickr.com/7885/46523771945_9496c2a191.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/XAMHIHFTZG/XC331138-call1.mp3'
+      name: "X-34 landspeeder",
+      species: "Repulsorcraft",
+      birth: "250km/h",
+      description:
+        "Landspeeders are fictional anti-gravity craft used through the Star Wars movies and Star Wars expanded universe. They are depicted both in civilian and military capacities, and several versions have been merchandised as toys and models..",
+      image: "https://live.staticflickr.com/65535/49544854507_b8bfe693c9_w.jpg",
+      audio: "https://dl.dropbox.com/s/bhafzloo8jqgq4g/01318.mp3?dl=0"
     },
     {
       id: 4,
-      name: 'Пингвин',
-      species: 'Aptenodytes forsteri',
-      description: 'Самец императорского пингвина достигает роста 130 см, его масса может приближаться к 50 кг. Из всех современных пингвинов этот вид – самый крупный. Питание пингвина состоит из рыбы, кальмаров и криля. Охотятся птицы в океане большими группами.',
-      image: 'https://live.staticflickr.com/5202/5252413926_8e013a3efd.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/OOECIWCSWV/XC449827-LS100829%20King%20Penguin%20call%20A.mp3'
+      name: "AT-ST",
+      species: "Walker",
+      birth: "90km/h",
+      description:
+        "All Terrain Walkers are armoured fighting vehicles from the Star Wars universe that traverse the landscape on mechanical legs. They are used by the Old Republic, the Galactic Empire, and the First Order for ground assault, reconnaissance or transport. Throughout the saga walkers have played.",
+      image: "https://live.staticflickr.com/65535/49544126248_1afda832fa_w.jpg",
+      audio: "https://dl.dropbox.com/s/n7or8n6olfd3oqh/01318.mp3?dl=0"
     },
     {
       id: 5,
-      name: 'Чайка',
-      species: 'Larus argentatus',
-      description: 'Чайки населяют берега морей, озёр, рек, водохранилищ, болот, часто гнездятся на островах. С конца прошлого века чайки стали появляться в крупных городах, где устраивает гнёзда на крышах зданий. Все чайки ведут колониальный образ жизни.',
-      image: 'https://live.staticflickr.com/65535/48577115317_7034201dde.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC501190-190801_06.50h_zilvermeeuw_duinen%20van%20goeree_roep_2ex_overvliegend_gezien_.mp3'
+      name: "Imperial Speeder Bike",
+      species: "Speeder",
+      birth: '360km/h',
+      description:
+        'Speeder bikes (also known as "jumpspeeders" or "hover bikes") and swoop bikes (or just "swoops") are small, fast transports that use repulsorlift engines in the fictional Star Wars universe. Return of the Jedi includes a prominent speeder bike chase;.',
+      image: "https://live.staticflickr.com/65535/49544855082_d43a3d2417_w.jpg",
+      audio:
+        "https://dl.dropbox.com/s/l1rfeiq3cofrds5/Speeder%20Bike%20Chase%20sequence%20sound%20FX%20%28ROTJ%29.mp3?dl=0"
     }
   ]
 ];

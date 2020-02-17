@@ -5,12 +5,12 @@ import Container from "./container/Container";
 
 const Description = ({ birdsList, isClickedIndex }) => {
   return (
-    <div className="col-md-9">
+    <div className="right" >
       <Card className="description">
         {isClickedIndex === null ? (
           <p className="instruction">
-            <span>Послушайте плеер.</span>
-            <span>Выберите птицу из списка</span>
+            <span>Listen to the player.</span>
+            <span>Select from the list.</span>
           </p>
         ) : (
           <Container birdsList={birdsList} isClickedIndex={isClickedIndex} />

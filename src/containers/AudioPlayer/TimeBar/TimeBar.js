@@ -20,27 +20,16 @@ const minMax = (min, max, value) => {
 };
 
 function getNewTimeProps(barRect, clientX, duration) {
-  const seconds = minMax(
-    0,
-    duration,
-    Math.floor(((clientX - barRect.left) / barRect.width) * duration)
-  );
+  const seconds = minMax(0, duration, Math.floor(((clientX - barRect.left) / barRect.width) * duration));
 
   const progress = (seconds / duration) * 100;
 
   return { seconds, progress };
 }
 
-function TimeBar({
-                   style,
-                   className,
-                   duration,
-                   progress,
-                   currentTime,
-                   isSeeking,
-                   setTime
-                 }) {
+function TimeBar({ style, className, duration, progress, currentTime, isSeeking, setTime }) {
   const barRef = React.useRef(null);
+  const circleRef = React.useRef(null);
 
   const [barStyle, setBarStyle] = useDirectStyle();
   const [circleStyle, setCircleStyle] = useDirectStyle();
@@ -52,23 +41,17 @@ function TimeBar({
     });
 
     setBarStyle({
-      background: `linear-gradient(to right, #E86F46 0%, #E86F46 ${progress}%, #737373 ${progress}%, #737373 100%)`
+      background: `linear-gradient(to right, #FFD600 0%, #ff6412 ${progress}%, #737373 ${progress}%, #737373 100%)`
     });
   }
 
   const bind = useDrag(
-    ({ xy, first, last, event }) => {
-      event.preventDefault();
-
+    ({ xy, first, last }) => {
       if (first) {
         setIgnoreTimeUpdates(true);
       }
 
-      const { seconds, progress } = getNewTimeProps(
-        barRef.current.getBoundingClientRect(),
-        xy[0],
-        duration
-      );
+      const { seconds, progress } = getNewTimeProps(barRef.current.getBoundingClientRect(), xy[0], duration);
 
       if (last) {
         setTime(seconds);
@@ -78,8 +61,10 @@ function TimeBar({
 
       setStyles(progress);
     },
-    { event: { passive: false, capture: true } }
+    { event: { passive: false, capture: true }, domTarget: circleRef }
   );
+
+  React.useEffect(bind, [bind]);
 
   React.useEffect(() => {
     if (ignoreTimeUpdates) {
@@ -91,16 +76,9 @@ function TimeBar({
   }, [progress]);
 
   return (
-    <div
-      className={`timebar ${className || ""}`}
-      style={{ position: "relative", ...style }}
-    >
+    <div className={`timebar ${className || ""}`} style={{ position: "relative", ...style }}>
       <directstyled.div ref={barRef} className="timebar-bar" style={barStyle} />
-      <directstyled.div
-        {...bind()}
-        className="timebar-circle"
-        style={circleStyle}
-      />
+      <directstyled.div ref={circleRef} {...bind()} className="timebar-circle" style={circleStyle} />
       <div className="timebar-time-info">
         <div>{isSeeking ? "buffering..." : formatTime(currentTime)}</div>
         <div>{formatTime(duration)}</div>

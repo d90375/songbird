@@ -1,10 +1,10 @@
 import React, { useReducer } from "react";
-import { CHANGE_LEVEL, NEW_GAME, SET_WINNER } from "../types";
+import { CHANGE_LEVEL, NEW_GAME, SET_WINNER, SET_STOP } from "../types";
 import BirdsContext from "../context/BirdsContext";
 import birdsReducer from "../reducers/birdsReducer";
 import { MAX, START_LEVEL, START_SCORE } from "../../constants";
 import BIRDS_DATA from "../../config/birdsData";
-import getRandomIndex from '../../utils/utils';
+import getRandomIndex from "../../utils/utils";
 
 const BirdsContextProvider = ({ children }) => {
   const initialState = {
@@ -17,7 +17,7 @@ const BirdsContextProvider = ({ children }) => {
     maxScore: MAX * BIRDS_DATA.length,
     isClickedIndex: null,
     targetIndex: getRandomIndex(BIRDS_DATA, 0),
-    stopMainPlayer: false
+    isStop: false
   };
 
   const [state, dispatch] = useReducer(birdsReducer, initialState);
@@ -43,6 +43,13 @@ const BirdsContextProvider = ({ children }) => {
     });
   };
 
+  const setIsStop = bool => {
+    dispatch({
+      type: SET_STOP,
+      payload: bool
+    });
+  };
+
   return (
     <BirdsContext.Provider
       value={{
@@ -56,10 +63,11 @@ const BirdsContextProvider = ({ children }) => {
         maxScore: state.maxScore,
         isClickedIndex: state.isClickedIndex,
         targetIndex: state.targetIndex,
-        stopMainPlayer: state.stopMainPlayer,
+        isStop: state.isStop,
         setLevel,
         setNewGame,
-        setClicker
+        setClicker,
+        setIsStop
       }}
     >
       {children}

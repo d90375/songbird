@@ -12,7 +12,7 @@ const Main = ({ birdsList }) => {
 
   useEffect(() => {
     console.log(`if you need to test the game the WINNER is ${birdsList[targetIndex].name} !`);
-  }, [level]);
+  }, [birdsList, targetIndex, level]);
 
   const successPlayer = useRef();
   const cancelPlayer = useRef();
@@ -20,7 +20,7 @@ const Main = ({ birdsList }) => {
   return (
     <>
       <Question audio={audio} name={name} image={image} nextLevel={nextLevel} />
-      <div className="row mb2">
+      <div className="row-mb-2 bottom-container">
         <List
           step={level}
           birdsList={birdsList}

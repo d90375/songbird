@@ -1,10 +1,8 @@
-@import "../../index";
 
 .btn {
+  position: relative;
   width: 100%;
   margin-top: 50px;
-  background-color: $second;
-  border: 1px solid #444;
   color: #fff !important;
   cursor: auto;
   -webkit-transition: 0.3s;
@@ -12,20 +10,39 @@
   outline: 0;
   box-shadow: none;
   margin-bottom: 1rem;
+
+  $border: 1px;
+  background: #000;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border transparent; /* !importanté */
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to top, #ff8200, #ff6412, orange, gold);
+  }
+
   &:focus
   {
     box-shadow: none;
     outline: 0;
-    background-color:$second;
+    background-color: #000000;
   }
   &:active{
     box-shadow: none;
     outline: 0;
-    background-color:$second;
+    background-color: #000000;
   }
 
   &:hover {
-    background-color: (lighten($second,10%));
+    background-color: (lighten(#000000,10%));
     outline: 0;
   }
 }
